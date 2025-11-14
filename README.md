@@ -14,14 +14,14 @@ support C89 and higher editions<br>
 This section provides macros related to data alignment in C and C++.
 
 ```c
-    ALIGNAS(expr) /* work since C11 or C++11 */
+    ALIGNAS(expr) /* valid from C11 and C++ 11 */
 ```
 The ALIGNAS macro in C/C++ is used to specify the alignment requirement of a variable or type.
 
 To check if ALIGNAS is supported, you can use the SPECIFIER_ALIGNAS_SUPPORTED macro if is set to 1.
 
 ```c
-    ALIGNOF(expr) /* work since C11 or C++11, returns 0 if not supported */
+    ALIGNOF(expr) /* valid from C11 and C++ 11, returns 0 if not supported */
 ```
 The ALIGNOF macro in C/C++ is used to determine the alignment requirement of a type or variable.
 
@@ -122,7 +122,7 @@ Example of use:
 ### C/C++ No return attribute macro
 This section provides a macro to indicate that a function does not return.
 ```c
-    NORETURN
+    NORETURN   /* valid from C11 and C++ 11 */
 ```
 To check if the NORETURN macro is supported, you can use the SPECIFIER_NORETURN_SUPPORTED macro if is set to 1.
 
@@ -211,15 +211,15 @@ Example of use:
 ### C/C++ Storage class macros
 This section provides macros for storage class specifiers in C and C++.
 ```c
-    AUTO
-    CONST
-    CONSTEXPR
-    EXTERN
-    INLINE
-    REGISTER
-    RESTRICT
-    STATIC
-    VOLATILE
+    AUTO            /* valid from CKR and pre C++ 98 */
+    CONST           /* valid from C89 and pre C++ 98 */
+    CONSTEXPR       /* valid from C23 and C++ 11 */
+    EXTERN          /* valid from CKR and pre C++ 98 */
+    INLINE          /* valid from C99 and C++ 98 */
+    REGISTER        /* valid from CKR and pre C++ 98, removed in C++ 17 */
+    RESTRICT        /* valid from C99, not a part of the C++ standard */
+    STATIC          /* valid from CKR and pre C++ 98 */
+    VOLATILE        /* valid from C89 and C++ 98 */
 ```
 To check if each storage class macro is supported, you can use the corresponding SPECIFIER_<STORAGE_CLASS>_SUPPORTED macros if are set to 1.
 
@@ -261,7 +261,7 @@ Example of use:
 ### C/C++ Static assert macro
 This section provides a macro for compile-time assertions.
 ```c
-    STATIC_ASSERT(expr,msg)
+    STATIC_ASSERT(expr,msg)   /* valid from C11 and C++ 11 */
 ```
 To check if the STATIC_ASSERT macro is supported, you can use the SPECIFIER_STATIC_ASSERT_SUPPORTED macro if is set to 1.
 
@@ -276,7 +276,7 @@ Example of use:
 ### C/C++ Thread local storage macro
 This section provides a macro for thread-local storage.
 ```c
-    THREAD_LOCAL
+    THREAD_LOCAL   /* valid from C11 and C++ 11 */
 ```
 To check if the THREAD_LOCAL macro is supported, you can use the SPECIFIER_THREAD_LOCAL_SUPPORTED macro if is set to 1.
 
@@ -297,12 +297,12 @@ Example of use:
 ### C/C++ Type qualifier macros
 This section provides macros for type qualifiers in C and C++.
 ```c
-    ATOMIC       /* since C11, not in C++ */
-    COMPLEX      /* since C99, not in C++ */
-    DECIMAL32    /* since C23, not in C++ */
-    DECIMAL64    /* since C23, not in C++ */
-    DECIMAL128   /* since C23, not in C++ */
-    IMAGINARY    /* since C99, not in C++ */
+    ATOMIC       /* valid from C11, not in C++ */
+    COMPLEX      /* valid from C99, not in C++ */
+    DECIMAL32    /* valid from C23, not in C++ */
+    DECIMAL64    /* valid from C23, not in C++ */
+    DECIMAL128   /* valid from C23, not in C++ */
+    IMAGINARY    /* valid from C99, not in C++ */
 ```
 To check if each type qualifier macro is supported, you can use the corresponding SPECIFIER_<TYPE_QUALIFIER>_SUPPORTED macros if are set to 1.
 
