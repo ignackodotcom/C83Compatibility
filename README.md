@@ -228,11 +228,11 @@ Example of use:
     ... 
     AUTO int autoVar = 0;
     CONST int constantVar = 42;
-    CONSTEXPR int ConstantExpressionFunction(void) { return 42; }
+    CONSTEXPR float g = 33.0f;
     EXTERN int externalVar;
     INLINE void InlineFunction(void) { staticVar++; return; }
     REGISTER int registerVar = 0;
-    RESTRICT void RestrictedFunction(int* RESTRICT ptr) { *ptr += 1; return; }
+    float * RESTRICT a;
     STATIC int staticVar = 0;
     VOLATILE int volatileVar = 0;
     ...
