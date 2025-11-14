@@ -151,7 +151,7 @@ Example of use:
 
     if (ptr == NULL) 
     {
-        // Handle null pointer case
+        /* Handle null pointer case */
     }
     ...
 ```
@@ -200,7 +200,7 @@ Example of use:
         va_start(args1, count);
         va_list args2;
         va_copy(args2, args1);
-        // Use args1 and args2 as needed
+        /* Use args1 and args2 as needed */
         va_end(args1);
         va_end(args2);
     }
