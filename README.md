@@ -50,9 +50,12 @@ The ALIGN_SIZE macro in C/C++ is used to adjust a given size value to be a multi
 Example of use:
 ```c
     ... 
-    ALIGNAS(16) int alignedInt;
+    struct sse_t
+    {
+        ALIGNAS(16) float sse_data[4];
+    };
 
-    size_t alignment = ALIGNOF(int);
+    printf("alignment of sse_t is %zu\n", ALIGNOF(struct sse_t));
     ...
 ```
 <br>
