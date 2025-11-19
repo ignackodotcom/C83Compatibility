@@ -9,7 +9,7 @@ support for 8.3 file naming conventions with the exception of the main include a
 support C89 and higher editions<br>
 <br>
 
-### C/C++ Alignment macros
+### Alignment macros
 This section provides macros related to data alignment in C and C++.
 
 ```c
@@ -59,7 +59,7 @@ Example of use:
 ```
 <br>
 
-### C/C++ Deprecated attribute macro
+### Deprecated attribute macro
 This section provides a macro to mark functions or variables as deprecated.
 ```c
     #define DEPRECATED(msg)         ...
@@ -75,7 +75,7 @@ Example of use:
 ```
 <br>
 
-### C/C++ Direction macros
+### Direction macros
 This section provides macros for indicating input and output parameters.
 ```c
     #define IN                      ...
@@ -94,7 +94,7 @@ Example of use:
 ```
 <br>
 
-### C/C++ Iso646 macros
+### Iso646 macros
 This section provides macros for alternative operator representations from the ISO 646 standard.
 ```c
     #define and                     ...
@@ -118,7 +118,7 @@ Example of use:
 ```
 <br>
 
-### C/C++ No return attribute macro
+### No return attribute macro
 This section provides a macro to indicate that a function does not return.
 ```c
     #define NORETURN                ... /* valid from C11 and C++ 11 */
@@ -137,7 +137,7 @@ Example of use:
 ```
 <br>
 
-### C/C++ NULL macro
+### NULL macro
 This section provides the NULL macro for representing null pointers.
 ```c
     #define NULL                    ...
@@ -156,7 +156,7 @@ Example of use:
 ```
 <br>
 
-### C/C++ Scope macros
+### Scope macros
 This section provides macros for defining variable and function scope.
 ```c
     #define SCOPE_GLOBAL            ...
@@ -184,7 +184,7 @@ Example of use:
 ```
 <br>
 
-### C/C++ Stdarg va_copy macro
+### Stdarg va_copy macro
 This section provides the va_copy macro for copying variable argument lists.
 ```c
     #define va_copy(dest, src)      ...
@@ -207,7 +207,7 @@ Example of use:
 ```
 <br>
 
-### C/C++ Storage class macros
+### Storage class macros
 This section provides macros for storage class specifiers in C and C++.
 ```c
     #define AUTO                    ... /* valid from CKR and pre C++ 98 */
@@ -238,7 +238,7 @@ Example of use:
 ```
 <br>
 
-### C/C++ End of string macro
+### End of string macro
 This section provides a macro for the end of string character.
 ```c
     #define EOS                     ...
@@ -257,7 +257,7 @@ Example of use:
 ```
 <br>
 
-### C/C++ Static assert macro
+### Static assert macro
 This section provides a macro for compile-time assertions.
 ```c
     #define STATIC_ASSERT(expr,msg) ... /* valid from C11 and C++ 11 */
@@ -272,7 +272,7 @@ Example of use:
 ```
 <br>
 
-### C/C++ Thread local storage macro
+### Thread local storage macro
 This section provides a macro for thread-local storage.
 ```c
     #define THREAD_LOCAL            ... /* valid from C11 and C++ 11 */
@@ -293,7 +293,7 @@ Example of use:
 ```
 <br>
 
-### C/C++ Type qualifier macros
+### Type qualifier macros
 This section provides macros for type qualifiers in C and C++.
 ```c
     #define ATOMIC                  ... /* valid from C11, not in C++ */
@@ -318,7 +318,7 @@ Example of use:
 ```
 <br>
 
-### C/C++ C type macros
+### C type macros
 This section provides additional character classification and conversion macros.
 ```c
     #define isascii(c)              ...
@@ -347,7 +347,7 @@ Example of use:
 ```
 <br>
 
-### C/C++ W C type macros
+### W C type macros
 This section provides wide character classification macros.
 ```c
     #define iswbdigit(c)            ...
