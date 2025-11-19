@@ -7,43 +7,42 @@
 part of the C83Project<br>
 support for 8.3 file naming conventions with the exception of the main include and code files<br>
 support C89 and higher editions<br>
-
 <br>
 
 ### C/C++ Alignment macros
 This section provides macros related to data alignment in C and C++.
 
 ```c
-    ALIGNAS(expr) /* valid from C11 and C++ 11 */
+    #define ALIGNAS(expr)               ... /* valid from C11 and C++ 11 */
 ```
 The ALIGNAS macro in C/C++ is used to specify the alignment requirement of a variable or type.
 
 To check if ALIGNAS is supported, you can use the SPECIFIER_ALIGNAS_SUPPORTED macro if is set to 1.
 
 ```c
-    ALIGNOF(expr) /* valid from C11 and C++ 11, returns 0 if not supported */
+    #define ALIGNOF(expr)               ... /* valid from C11 and C++ 11, returns 0 if not supported */
 ```
 The ALIGNOF macro in C/C++ is used to determine the alignment requirement of a type or variable.
 
 To check if ALIGNOF is supported, you can use the SPECIFIER_ALIGNOF_SUPPORTED macro if is set to 1.
 ```c
-    ALIGN_UP(value, alignment)
-    ALIGN_DOWN(value, alignment)
+    #define ALIGN_UP(value, alignment)   ...
+    #define ALIGN_DOWN(value, alignment) ...
 ```
 The ALIGN_UP and ALIGN_DOWN macros in C/C++ are used to adjust a given value to the nearest higher or lower multiple of a specified alignment, respectively.
 
 ```c
-    IS_ALIGNED(value, alignment)
+    #define IS_ALIGNED(value, alignment) ...
 ```
 The IS_ALIGNED macro in C/C++ is used to check if a given value is aligned to a specified alignment boundary.
 
 ```c
-    ALIGN_PTR(ptr, alignment)
+    #define ALIGN_PTR(ptr, alignment)   ...
 ```
 The ALIGN_PTR macro in C/C++ is used to align a pointer to a specified alignment boundary.
 
 ```c
-    ALIGN_SIZE(value, multiple)
+    #define ALIGN_SIZE(value, multiple) ...
 ```
 The ALIGN_SIZE macro in C/C++ is used to adjust a given size value to be a multiple of a specified value.
 
@@ -63,7 +62,7 @@ Example of use:
 ### C/C++ Deprecated attribute macro
 This section provides a macro to mark functions or variables as deprecated.
 ```c
-    DEPRECATED(msg)
+    #define DEPRECATED(msg)         ...
 ```
 To check if the DEPRECATED macro is supported, you can use the SPECIFIER_DEPRECATED_SUPPORTED macro if is set to 1.
 
@@ -79,8 +78,8 @@ Example of use:
 ### C/C++ Direction macros
 This section provides macros for indicating input and output parameters.
 ```c
-    IN
-    OUT
+    #define IN                      ...
+    #define OUT                     ...
 ```
 
 Example of use:
@@ -98,17 +97,17 @@ Example of use:
 ### C/C++ Iso646 macros
 This section provides macros for alternative operator representations from the ISO 646 standard.
 ```c
-    and
-    and_eq
-    bitand
-    bitor
-    compl
-    not
-    not_eq
-    or
-    or_eq
-    xor
-    xor_eq
+    #define and                     ...
+    #define and_eq                  ...
+    #define bitand                  ...
+    #define bitor                   ...
+    #define compl                   ...
+    #define not                     ...
+    #define not_eq                  ...
+    #define or                      ...
+    #define or_eq                   ...
+    #define xor                     ...
+    #define xor_eq                  ...
 ```
 
 Example of use:
@@ -122,7 +121,7 @@ Example of use:
 ### C/C++ No return attribute macro
 This section provides a macro to indicate that a function does not return.
 ```c
-    NORETURN   /* valid from C11 and C++ 11 */
+    #define NORETURN                ... /* valid from C11 and C++ 11 */
 ```
 To check if the NORETURN macro is supported, you can use the SPECIFIER_NORETURN_SUPPORTED macro if is set to 1.
 
@@ -141,7 +140,7 @@ Example of use:
 ### C/C++ NULL macro
 This section provides the NULL macro for representing null pointers.
 ```c
-    NULL
+    #define NULL                    ...
 ```
 
 Example of use:
@@ -160,13 +159,13 @@ Example of use:
 ### C/C++ Scope macros
 This section provides macros for defining variable and function scope.
 ```c
-    SCOPE_GLOBAL
-    SCOPE_GLOBAL_EXTERN
+    #define SCOPE_GLOBAL            ...
+    #define SCOPE_GLOBAL_EXTERN     ...
 
-    SCOPE_FILE
+    #define SCOPE_FILE              ...
 
-    SCOPE_BLOCK
-    SCOPE_BLOCK_PERMANENT
+    #define SCOPE_BLOCK             ...
+    #define SCOPE_BLOCK_PERMANENT   ...
 ```
 
 Example of use:
@@ -188,7 +187,7 @@ Example of use:
 ### C/C++ Stdarg va_copy macro
 This section provides the va_copy macro for copying variable argument lists.
 ```c
-    va_copy(dest, src)
+    #define va_copy(dest, src)      ...
 ```
 
 Example of use:
@@ -211,15 +210,15 @@ Example of use:
 ### C/C++ Storage class macros
 This section provides macros for storage class specifiers in C and C++.
 ```c
-    AUTO            /* valid from CKR and pre C++ 98 */
-    CONST           /* valid from C89 and pre C++ 98 */
-    CONSTEXPR       /* valid from C23 and C++ 11 */
-    EXTERN          /* valid from CKR and pre C++ 98 */
-    INLINE          /* valid from C99 and C++ 98 */
-    REGISTER        /* valid from CKR and pre C++ 98, removed in C++ 17 */
-    RESTRICT        /* valid from C99, not a part of the C++ standard */
-    STATIC          /* valid from CKR and pre C++ 98 */
-    VOLATILE        /* valid from C89 and C++ 98 */
+    #define AUTO                    ... /* valid from CKR and pre C++ 98 */
+    #define CONST                   ... /* valid from C89 and pre C++ 98 */
+    #define CONSTEXPR               ... /* valid from C23 and C++ 11 */
+    #define EXTERN                  ... /* valid from CKR and pre C++ 98 */
+    #define INLINE                  ... /* valid from C99 and C++ 98 */
+    #define REGISTER                ... /* valid from CKR and pre C++ 98, removed in C++ 17 */
+    #define RESTRICT                ... /* valid from C99, not a part of the C++ standard */
+    #define STATIC                  ... /* valid from CKR and pre C++ 98 */
+    #define VOLATILE                ... /* valid from C89 and C++ 98 */
 ```
 To check if each storage class macro is supported, you can use the corresponding SPECIFIER_<STORAGE_CLASS>_SUPPORTED macros if are set to 1.
 
@@ -242,7 +241,7 @@ Example of use:
 ### C/C++ End of string macro
 This section provides a macro for the end of string character.
 ```c
-    EOS
+    #define EOS                     ...
 ```
 
 Example of use:
@@ -261,7 +260,7 @@ Example of use:
 ### C/C++ Static assert macro
 This section provides a macro for compile-time assertions.
 ```c
-    STATIC_ASSERT(expr,msg)   /* valid from C11 and C++ 11 */
+    #define STATIC_ASSERT(expr,msg) ... /* valid from C11 and C++ 11 */
 ```
 To check if the STATIC_ASSERT macro is supported, you can use the SPECIFIER_STATIC_ASSERT_SUPPORTED macro if is set to 1.
 
@@ -276,7 +275,7 @@ Example of use:
 ### C/C++ Thread local storage macro
 This section provides a macro for thread-local storage.
 ```c
-    THREAD_LOCAL   /* valid from C11 and C++ 11 */
+    #define THREAD_LOCAL            ... /* valid from C11 and C++ 11 */
 ```
 To check if the THREAD_LOCAL macro is supported, you can use the SPECIFIER_THREAD_LOCAL_SUPPORTED macro if is set to 1.
 
@@ -297,12 +296,12 @@ Example of use:
 ### C/C++ Type qualifier macros
 This section provides macros for type qualifiers in C and C++.
 ```c
-    ATOMIC       /* valid from C11, not in C++ */
-    COMPLEX      /* valid from C99, not in C++ */
-    DECIMAL32    /* valid from C23, not in C++ */
-    DECIMAL64    /* valid from C23, not in C++ */
-    DECIMAL128   /* valid from C23, not in C++ */
-    IMAGINARY    /* valid from C99, not in C++ */
+    #define ATOMIC                  ... /* valid from C11, not in C++ */
+    #define COMPLEX                 ... /* valid from C99, not in C++ */
+    #define DECIMAL32               ... /* valid from C23, not in C++ */
+    #define DECIMAL64               ... /* valid from C23, not in C++ */
+    #define DECIMAL128              ... /* valid from C23, not in C++ */
+    #define IMAGINARY               ... /* valid from C99, not in C++ */
 ```
 To check if each type qualifier macro is supported, you can use the corresponding SPECIFIER_<TYPE_QUALIFIER>_SUPPORTED macros if are set to 1.
 
@@ -322,17 +321,17 @@ Example of use:
 ### C/C++ C type macros
 This section provides additional character classification and conversion macros.
 ```c
-    isascii(c)
-    isbdigit(c)
-    isodigit(c)
-    isblank(c)
-    islowervowel(c)
-    isuppervowel(c)
-    isvowel(c)
-    islowerconsonant(c)
-    isupperconsonant(c)
-    isconsonant(c)
-    toascii(c)
+    #define isascii(c)              ...
+    #define isbdigit(c)             ...
+    #define isodigit(c)             ...
+    #define isblank(c)              ...
+    #define islowervowel(c)         ...
+    #define isuppervowel(c)         ...
+    #define isvowel(c)              ...
+    #define islowerconsonant(c)     ...
+    #define isupperconsonant(c)     ...
+    #define isconsonant(c)          ...
+    #define toascii(c)              ...
 ```
 
 Example of use:
@@ -351,15 +350,15 @@ Example of use:
 ### C/C++ W C type macros
 This section provides wide character classification macros.
 ```c
-    iswbdigit(c)
-    iswodigit(c)
-    iswblank(c)
-    iswlowervowel(c)
-    iswuppervowel(c)
-    iswvowel(c)
-    iswlowerconsonant(c)
-    iswupperconsonant(c)
-    iswconsonant(c)
+    #define iswbdigit(c)            ...
+    #define iswodigit(c)            ...
+    #define iswblank(c)             ...
+    #define iswlowervowel(c)        ...
+    #define iswuppervowel(c)        ...
+    #define iswvowel(c)             ...
+    #define iswlowerconsonant(c)    ...
+    #define iswupperconsonant(c)    ...
+    #define iswconsonant(c)         ...
 ```
 
 Example of use:
@@ -373,4 +372,5 @@ Example of use:
 ```
 
 # Updates
+2025 11 19 More detailed description in this readme.md file<br>
 <br>
