@@ -23,6 +23,7 @@
 #include "CDeprec.h"
 #include "CDirect.h"
 #include "CIso646E.h"
+#include "CLimits.h"
 #include "CNoRet.h"
 #include "CNull.h"
 #include "CScope.h"

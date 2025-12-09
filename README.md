@@ -118,6 +118,13 @@ Example of use:
 ```
 <br>
 
+### SIZE_T_MAX macro
+This section provides a macro for finding the maximum for size_t.
+```c
+    #define SIZE_T_MAX              ...
+```
+<br>
+
 ### No return attribute macro
 This section provides a macro to indicate that a function does not return.
 ```c
@@ -373,4 +380,5 @@ Example of use:
 
 # Updates
 2025 11 19 More detailed description in this readme.md file<br>
+2025 12 09 Added SIZE_T_MAX macro<br>
 <br>
