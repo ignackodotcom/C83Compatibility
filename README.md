@@ -325,6 +325,23 @@ Example of use:
 ```
 <br>
 
+### TYPEOF and TYPEOF_UNQUAL macros
+This section provides macros for obtaining the type of an expression.
+```c
+    #define TYPEOF(expr)            ... /* valid from C23, not in C++ */
+    #define TYPEOF_UNQUAL(expr)     ... /* valid from C23, not in C++ */
+```
+To check if the TYPEOF and TYPEOF_UNQUAL macros are supported, you can use the SPECIFIER_TYPEOF_SUPPORTED and SPECIFIER_TYPEOF_UNQUAL_SUPPORTED macros if are set to 1.
+
+Example of use:
+```c
+    ... 
+    TYPEOF(int) var1;               /* var1 is of type int */
+    TYPEOF_UNQUAL(const int) var2;  /* var2 is of type int */
+    ...
+```
+<br>
+
 ### C type macros
 This section provides additional character classification and conversion macros.
 ```c
@@ -381,4 +398,5 @@ Example of use:
 # Updates
 2025 11 19 More detailed description in this readme.md file<br>
 2025 12 09 Added SIZE_T_MAX macro<br>
+2025 12 11 Added TYPEOF and TYPEOF_UNQUAL macros<br>
 <br>

@@ -33,6 +33,7 @@
 #include "CSttcAst.h"
 #include "CThrdLcl.h"
 #include "CTpQlfr.h"
+#include "CTypeof.h"
 #include "CWcTypeE.h"
 
 
